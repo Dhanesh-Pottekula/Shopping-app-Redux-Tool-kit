@@ -6,7 +6,7 @@ import { Add } from '../store/CartSlice';
 
 function CardComponent({product}) {
     const dispatch=useDispatch();
-  return (<div className='flex flex-row justify-start items-start flex-wrap flex-grow'> 
+  return (<div className='flex flex-row justify-start items-start flex-wrap flex-grow bg-body-tertiary  bg-gradient-to-r from-amber-200 to-teal-400 min-h-screen max-h-full'> 
         {product && product.map((card_data)=>{
             
             return(

@@ -10,15 +10,24 @@ function Home() {
         dispatch(getProducts())
         }, []);
   return (
-    <div className='flex flex-col justify-center'>
+    <>
+
+    <div className=' text-center pt-8 h-screen w-full bg-gradient-to-br from-amber-200 to-teal-400 items-center'>
+    <h1 className='pb-8'> Exclusive Deals  </h1>
+      <h2> Pick your choice & save upto 20%  .... </h2>
+
+        <div className='flex flex-row justify-evenly h-screen w-full bg-gradient-to-br from-amber-200 to-teal-400 items-center pb-32'>
+            {/* <img src="https://icons8.com/icon/KKx3U64bUeAr/geyser" alt="image"/> */}
+            <button onClick={()=>{nav("/Electronics")}} className='h-16 w-32 rounded-lg  border-transparent  bg-gradient-to-br from-lime-300 to-teal-500 hover:bg-sky-300 font-bold font-sans'> Electronics</button>
+        <button onClick={()=>{nav("/Clothes")}}className='h-16 w-32 rounded-lg  border-transparent  bg-gradient-to-br from-lime-300 to-teal-500 hover:bg-sky-300 font-bold font-sans' > Clothes</button>
+        <button onClick={()=>{nav("/Furniture")}} className='h-16 w-32 rounded-lg  border-transparent  bg-gradient-to-br from-lime-300 to-teal-500 hover:bg-sky-300 font-bold font-sans' > Furniture</button>
+        <button onClick={()=>{nav("/shoes")}}className='h-16 w-32 rounded-lg  border-transparent  bg-gradient-to-br from-lime-300 to-teal-500 hover:bg-sky-300 font-bold font-sans' > shoes</button>
+        <button onClick={()=>{nav("/Miscellaneous")}} className='h-16 w-32 rounded-lg  border-transparent  bg-gradient-to-br from-lime-300 to-teal-500 hover:bg-sky-300 font-bold font-sans' > Miscellaneous</button>
         
-        <button onClick={()=>{nav("/Electronics")}}> Electronics</button>
-        <button onClick={()=>{nav("/Clothes")}}> Clothes</button>
-        <button onClick={()=>{nav("/Furniture")}}> Furniture</button>
-        <button onClick={()=>{nav("/shoes")}}> shoes</button>
-        <button onClick={()=>{nav("/Miscellaneous")}}> Miscellaneous</button>
-        
+        </div>
     </div>
+    
+    </>
   )
 }
 

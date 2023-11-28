@@ -9,7 +9,7 @@ function Cart() {
     const dispatch=useDispatch()
     
   return (
-    <div className='flex flex-row justify-start items-start flex-wrap flex-grow'>
+    <div className='flex flex-row justify-start items-start flex-wrap flex-grow bg-body-tertiary  bg-gradient-to-r from-amber-200 to-teal-400 min-h-screen max-h-full'>
       <div className=' flex justify-center items-center w-full font-bold font-serif'>
         <h1>Cart</h1>
       </div>

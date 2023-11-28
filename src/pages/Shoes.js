@@ -10,7 +10,7 @@ function Shoes() {
   const {data}=useSelector(state=>state.Products)
     
   const dispatch=useDispatch();
-  return (<div className='flex flex-row justify-start items-start flex-wrap flex-grow'> 
+  return (<div className='flex-wrap flex-grow bg-body-tertiary flex flex-row justify-evenly  bg-gradient-to-r from-amber-200 to-teal-400 items-center'> 
         {data && data.map((card_data)=>{
             
             return(
