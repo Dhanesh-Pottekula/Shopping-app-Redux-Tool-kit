@@ -11,15 +11,15 @@ function CardComponent({product}) {
             
             return(
                 <>
-                <div className='col-md-4 p-5 flex flex-col justify-center items-center text-center '>
+                <div className='col-md-3 p-3 flex flex-col justify-center items-center text-center max-h-84'>
                 
                 <Card style={{ width: '18rem' }} >
-                <Card.Img variant="top" src={card_data.images[0]} className='h-92'/>
+                <Card.Img variant="top" src={card_data.images[0]} className='h-84 '/>
                 <Card.Body>
                 <Card.Title>{card_data.title}</Card.Title>
                 <Card.Text>{card_data.price}</Card.Text>
-                <Card.Text>{card_data.description}</Card.Text>
-                <Button  className=' bg-amber-200 rounded-lg p-4' variant="primary" onClick={()=>card_data && dispatch(Add(card_data))}>Add to Cart</Button>
+                <Card.Text className='h-12 overflow-hidden'>{card_data.description}</Card.Text>
+                <Button  className=' bg-amber-200 rounded-lg p-2' variant="primary" onClick={()=>card_data && dispatch(Add(card_data))}>Add to Cart</Button>
                 </Card.Body>
                 </Card>
                 </div>

@@ -16,13 +16,14 @@ function Shoes() {
             return(
                 <>
                 { card_data.category.name==="Shoes" && 
-                <div className='col-md-4 p-5 flex flex-col justify-center items-center text-center '>
+                <div className='col-md-3 p-3 flex flex-col justify-center items-center text-center max-h-84 overflow-hidden'>
                 
                 <Card style={{ width: '18rem' }} >
                 <Card.Img variant="top" src={card_data.images[0]} className='h-92'/>
                 <Card.Body>
                 <Card.Title>{card_data.title}</Card.Title>
                 <Card.Text>{card_data.price}</Card.Text>
+                <Card.Text>{card_data.description}</Card.Text>
                 <Card.Text>{card_data.category.name}</Card.Text>
 
                 {/* <Card.Text>{card_data.description}</Card.Text> */}

@@ -16,7 +16,7 @@ function NavbarComponent() {
     <>
     <Navbar expand="lg" className="bg-body-tertiary flex flex-row justify-evenly  bg-gradient-to-r from-amber-200 to-teal-400 items-center">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand ><img className="h-12 w-20 pl-2 rounded-e-full" src='https://img.freepik.com/premium-vector/online-shop-logo-ecommerce-logo-sopping-logo_698473-15.jpg?size=626&ext=jpg'/></Navbar.Brand>
         
 
 
@@ -26,7 +26,7 @@ function NavbarComponent() {
         </Dropdown.Toggle>
 
         <Dropdown.Menu className=' bg-sky-400'>
-          <Dropdown.Item href="/Dashboard" active>
+          <Dropdown.Item onClick={()=>{nav("/Dashboard")}} active>
             All Products
           </Dropdown.Item>
           <Dropdown.Item className=' bg-sky-400' onClick={()=>{nav("/Clothes")}}> Clothes</Dropdown.Item>
@@ -35,15 +35,16 @@ function NavbarComponent() {
           <Dropdown.Item className=' bg-sky-400' onClick={()=>{nav("/Shoes")}}>Shoes</Dropdown.Item>
           <Dropdown.Item className=' bg-sky-400' onClick={()=>{nav("/Miscellaneous")}}>Miscellaneous</Dropdown.Item>
           <Dropdown.Divider />
-          <Dropdown.Item  className=' bg-sky-400' onClick={()=>{nav("/Home")}}>Home</Dropdown.Item>
+          <Dropdown.Item  className=' bg-sky-400' onClick={()=>{nav("/")}}>Home</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
 
         <Nav.Link to="/" as={Link} className='p-4'> Home</Nav.Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse className=' justify-end'>
-                <Navbar.Text>
-                    <Nav.Link to="/Cart" as={Link}> My Bag {store.length}</Nav.Link> 
+                <Navbar.Text className='flex flex-row '>
+                <span className='font-bold text-xl text-slate-600'>{store.length}</span>
+                    <Nav.Link to="/Cart" as={Link} className='flex flex-row '> <img className='h-16 w-20 rounded-full ' src='https://img.freepik.com/free-vector/shopping-cart-logo-shopping-basket-design-vector-illustration_460848-8933.jpg?size=626&ext=jpg&ga=GA1.1.767214990.1701197582&semt=ais'/> </Nav.Link> 
                 </Navbar.Text>
             </Navbar.Collapse>
       </Container>

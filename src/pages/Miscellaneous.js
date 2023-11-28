@@ -15,7 +15,7 @@ function Miscellaneous() {
             
             return(
                 <>
-                { card_data.category.name==="Miscellaneous" && <div className='col-md-4 p-5 flex flex-col justify-center items-center text-center '>
+                { card_data.category.name==="Miscellaneous" && <div className='col-md-3 p-3 flex flex-col justify-center items-center text-center  max-h-84 overflow-hidden'>
                 
                 <Card style={{ width: '18rem' }} >
                 <Card.Img variant="top" src={card_data.images[0]} className='h-92'/>
