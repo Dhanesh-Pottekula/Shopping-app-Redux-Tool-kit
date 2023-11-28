@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Cart from './pages/Cart';
+import Dashboard from './pages/Dashboard';
+import RootLayout from './pages/RootLayout';
+import Electronics from './pages/Electronics';
+import Clothes from './pages/Clothes';
+import Home from './pages/Home';
+import Furniture from './pages/Furniture';
+import Shoes from './pages/Shoes';
+import Miscellaneous from './pages/Miscellaneous';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes >
+      <Route path="/" element={<RootLayout/>}>
+         <Route path="/" element={<Home/>}/>
+        <Route path="/Dashboard" element={<Dashboard/>}/>
+        
+        <Route path="/Cart" element={<Cart/>}/>
+        <Route path="/Electronics" element={<Electronics/>}/>
+        <Route path="/Clothes" element={<Clothes/>}/>
+        <Route path="/Furniture" element={<Furniture/>}/>
+
+        <Route path="/Miscellaneous" element={<Miscellaneous/>}/>
+        <Route path="/shoes" element={<Shoes/>}/>
+      </Route>
+      </Routes>
+    
+    </BrowserRouter>
   );
 }
 
